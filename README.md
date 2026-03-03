@@ -60,6 +60,15 @@ The purpose of this project is to:
 
 ---
 
+## 🗄️ Database Setup
+
+1. Open MySQL Workbench
+2. Create a new database
+3. Import the file `database/notes_db.sql`
+4. Run the script
+
+---
+
 ## 👩‍💻 Developed By
 
 Megha Chavan  
