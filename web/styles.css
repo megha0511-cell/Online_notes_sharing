@@ -1,0 +1,21 @@
+.sidebar {
+    width: 20%;
+    float: left;
+    background: #f4f4f4;
+    padding: 10px;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul ul {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+.content {
+    width: 75%;
+    float: right;
+    padding: 20px;
+}

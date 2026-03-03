@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Notes</title>
+  <style>
+    /* Overall page styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #DFD8C5;
+      color: #1A1A1A;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    /* Wrapper to hold both columns */
+    .wrapper {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      background-color: #EEC994;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    
+    /* Form container styling */
+    .form-container {
+      flex: 1;
+      padding: 30px;
+      background-color: #EEC994;
+    }
+    
+    .form-container h2 {
+      color: #523A2E;
+      margin-bottom: 20px;
+    }
+    
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-container label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #523A2E;
+    }
+    
+    .form-container input[type="text"],
+    .form-container input[type="file"],
+    .form-container textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 2px solid #523A2E;
+      border-radius: 5px;
+      background: white;
+      font-size: 14px;
+    }
+    
+    .form-container input[type="submit"] {
+      background: #523A2E;
+      color: #EEC994;
+      font-weight: bold;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    
+    .form-container input[type="submit"]:hover {
+      background: #402A20;
+    }
+    
+    /* Image container styling */
+    .image-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #DFD8C5;
+      padding: 20px;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .dashboard-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #523A2E;
+      color: #EEC994;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    
+    .dashboard-button:hover {
+      background: #402A20;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form-container">
+      <h2>Upload Department Notes</h2>
+      <form action="uploadServlet" method="post" enctype="multipart/form-data">
+        <label>Department Name:</label>
+        <input type="text" name="dept_name" required>
+
+        <label>Note Name:</label>
+        <input type="text" name="note_name" required>
+
+        <label>Select File:</label>
+        <input type="file" name="file" required>
+
+        <label>Optional: Enter Text Notes</label>
+        <textarea name="file_text" rows="5" cols="40"></textarea>
+
+        <input type="submit" value="Upload">
+      </form>
+    </div>
+    <div class="image-container">
+      <img src="images/image.jpg" alt="Related to Notes" />
+      <a class="dashboard-button" href="dashboard.jsp">Back to Dashboard</a>
+    </div>
+  </div>
+</body>
+</html>

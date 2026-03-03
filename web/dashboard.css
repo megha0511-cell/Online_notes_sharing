@@ -1,0 +1,340 @@
+/* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5; /* Light background */
+        }
+
+        header {
+            background-color: #D1BE9C; /* Blue color */
+            
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            color: #252525;
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            margin-left: auto;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            text-align:right;
+            color: #252525;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #7D4F50; 
+            color: #000;
+        }
+
+        .logout-btn {
+            text-decoration: none;
+            padding: 8px 15px;
+            background-color: #dc3545; 
+            color: #fff;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #c82333; /* Darker red */
+            opacity: 0.9;
+        }
+
+        main {
+            text-align: center;
+            margin: 50px;
+        }
+
+        main h2 {
+            font-size: 2em;
+            color: #0056b3;
+        }
+
+        main p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+       
+        
+
+        /* Welcome Section Styles */
+        .welcome-section {
+            position: relative;
+            text-align: center;
+            background: linear-gradient(
+     rgba(152,180,187, 0.5), /* Lavender color */
+        rgba(77,98,100, 0.5)
+    ), url('images/notes-background') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            text-align:center;
+            
+            padding: 60px 20px;
+        }
+
+        .welcome-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section .explore-btn {
+            text-decoration: none;
+            background-color: #543A14;
+            color: #FFF0DC;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .welcome-section .explore-btn:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        /* Features Section Styles */
+        .features-section {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 200px; /* Consistent height */
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .feature-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .feature-card .overlay h3 {
+            color: #fff;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            main h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            nav ul li a {
+                font-size: 0.9em;
+            }
+
+            .logout-btn {
+                font-size: 0.9em;
+                padding: 6px 12px;
+            }
+
+            main h2 {
+                font-size: 1.5em;
+            }
+
+            main p {
+                font-size: 1em;
+            }
+        }
+        /* Progress Section Styles */
+.progress-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff; /* White background */
+}
+
+.progress-content {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 30px;
+    align-items: center;
+}
+.content-with-diamonds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+}
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.text-content h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000; /* Charcoal or black */
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    gap: 30px;
+}
+
+.image-card {
+    position: relative;
+    overflow: hidden;
+    transform: rotate(45deg);
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+    border-radius: 12px;/* Rotates the image container */
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(-45deg); /* Rotates the image back */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover img {
+    transform: rotate(-45deg) scale(1.1); /* Zoom effect on hover */
+}
+.info-section {
+  background-color: #D1BE9C;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.info-container div {
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+}
+
+h3 {
+  color: #001f54;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #001f54;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #523A2E;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
